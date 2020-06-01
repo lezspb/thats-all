@@ -24,7 +24,7 @@ header {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 2vh;
+    top: 6vh;
     left: calc(-60vw);
     border: 2px solid #333;
     border-radius: 5px;
@@ -122,6 +122,7 @@ nav {
 @media (min-width:1024px) {
     .base_menu{
       width: 30vw;
+      top: 2vh;    
     }
     .container {
         flex-direction: row;
