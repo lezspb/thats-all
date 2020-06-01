@@ -1,0 +1,96 @@
+<!DOCTYPE  html>
+<html lang="ru">
+    <meta charset = "UTF-8">
+    <title>Системы охлаждения ПК</title>
+    <link rel="stylesheet"  href="style.css">
+    <meta name="viewport" content = "width=device-width">
+    <body  class="main">
+        <header>
+            <h1>Система охлаждения ПК </h1>
+        </header>
+        <main>
+            <nav>
+           <button id="main_btn">Меню</button>
+            <ol id="main_menu" class="base_menu rounded" style="padding: 3vh; padding-top: 5vh; line-height: 200%; align-items: left; min-width:30%">
+                <li ><a href="#">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="gallary.html">Галерея</a></li>
+            </ol>
+            </nav>
+             <section>
+                <h2>Водяное охлаждение ПК</h2>
+                 <div class = "container">
+                     <article class="card">
+                        <h3>Интерактивная карточка</h3>
+                         <div id="mydiv">
+                         <img src="img/comp.jpg" usemap="#comp" width="441" height="400" border="0" style="max-width:100%" >
+                         <map  name="comp" width="100%" id="Map">
+                             <area shape="poly" href="#two" title="Водоблок для процессора. Под ним сам процессор." coords="131,100, 98,89, 117,123, 96,154, 135,141, 159,154, 155,122, 170,86, 135,104, 102,91, 131,100" >
+                             <area shape="rect" href="#three" title = "Водоблок для охлаждающей жидкости с насосом" coords="236,103, 307,213">
+                             <area shape="rect" href="#four"  title = "Радиатор для охлаждения водяной системы" coords="81,49, 303,73">
+                             <area shape="rect" href="#five" title = "Система жидкостного охлаждения с вентиляторами" coords="60,3, 312,44">
+                             <area shape="rect" href="#six" title = "Вентиляторы" coords="218,290, 413,381">
+                        </map>
+                         </div>     
+                        </article>
+                    <article class="card">
+                        <h3>Элементы системы охлаждения</h3>
+                        <div id="slideshow">
+                            <img id="one" src="img/scale_2400.webp" width="431"  height="400" >
+                            <img id="two" src="img/vodoblokforprocessor.jpg" width="431"  height="400" >
+                            <img id="three" src="img/sozh.jpg" width="431"  height="400">
+                            <img id="four" src="img/whater-radiator.jpg" width="431"  height="400" >
+                            <img id="five" src="img/szho.jpg" width="431"  height="400">
+                            <img id="six" src="img/ventiljator.jpg" width="431"  height="400">
+                            <nav>
+                                <a href="#one"></a>
+                                <a href="#two"></a>
+                                <a href="#three"></a>
+                                <a href="#four"></a>
+                                <a href="#five"></a>
+                                <a href="#six"></a>
+                            </nav>
+                        </div>    
+                    </article>
+                 </div>
+                 <div class="container">
+                    <article class="card">
+                        <h3>Работа системы охлаждения ПК на воде.</h3>
+                        <video width="350" height="250" controls="controls" type="video/mp4">
+                            <source src="assets/svo.mp4">
+                        </video>
+                     </article>
+                    <article class="card">
+                        <h3><span href="#one"><h3>Как это работает</h3></span></h3>
+                        <aside class = "about">От процессора или графического чипа тепло сначала передается через теплообменни к воде. Далее нагретая вода двигается в радиатор, где тепло из водной среды уходит в воздух и отрабатывается во внешнюю среду. Качает же водный поток, как водится, специальный насос – помпа. Весьма стандартная система, которая используется во многих сферах, таких как двигатели внутреннего сгорания. Большим преимуществом выбора СВО объясняется просто. Вода имеет куда более высокий уровень теплоемкости, что позволяет намного эффективнее охлаждать элементы и поддерживать низкий температурный режим.</aside>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer>
+           <a id="back" href="#">Back</a>
+        <cite>
+            Автор: Зимин Е.А. (май 2020г.)
+        </cite>
+        </footer>
+        <script>
+            "use strict"
+            main_btn.addEventListener("click",fOpen)
+            function fOpen() {
+            main_menu.classList.toggle("menu_open")}
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        "use strict"
+        ;(function(a)
+        {a.fn.rwdImageMaps=function()
+          {var c=this;var b=function()
+           {c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").load(function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j)
+                {var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}
+                var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");
+                                return this}})(jQuery);
+
+        $('img[usemap]').rwdImageMaps();
+    </script>         
+    </body>   
+</html>    
